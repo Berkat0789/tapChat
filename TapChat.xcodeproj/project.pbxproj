@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		B4060FB320E5B29500724D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4060FB220E5B29500724D48 /* AppDelegate.swift */; };
-		B4060FB520E5B29500724D48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4060FB420E5B29500724D48 /* ViewController.swift */; };
 		B4060FB820E5B29500724D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4060FB620E5B29500724D48 /* Main.storyboard */; };
 		B4060FBA20E5B29700724D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4060FB920E5B29700724D48 /* Assets.xcassets */; };
 		B4060FBD20E5B29700724D48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4060FBB20E5B29700724D48 /* LaunchScreen.storyboard */; };
+		B4060FC820E5B30300724D48 /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4060FC720E5B30300724D48 /* homeVC.swift */; };
+		B4060FCA20E5B69600724D48 /* login_RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4060FC920E5B69600724D48 /* login_RegisterVC.swift */; };
+		B4060FCC20E5B8B400724D48 /* ContainerViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4060FCB20E5B8B400724D48 /* ContainerViewWithShadow.swift */; };
+		B4060FCE20E5BFAD00724D48 /* roundedProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4060FCD20E5BFAD00724D48 /* roundedProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4060FAF20E5B29500724D48 /* TapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4060FB220E5B29500724D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4060FB420E5B29500724D48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4060FB720E5B29500724D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4060FB920E5B29700724D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4060FBC20E5B29700724D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4060FBE20E5B29700724D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4060FC720E5B30300724D48 /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
+		B4060FC920E5B69600724D48 /* login_RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_RegisterVC.swift; sourceTree = "<group>"; };
+		B4060FCB20E5B8B400724D48 /* ContainerViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewWithShadow.swift; sourceTree = "<group>"; };
+		B4060FCD20E5BFAD00724D48 /* roundedProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		B4060FB120E5B29500724D48 /* TapChat */ = {
 			isa = PBXGroup;
 			children = (
+				B4060FC620E5B2E500724D48 /* Model */,
+				B4060FC520E5B2DF00724D48 /* View */,
+				B4060FC420E5B2D800724D48 /* Controller */,
 				B4060FB220E5B29500724D48 /* AppDelegate.swift */,
-				B4060FB420E5B29500724D48 /* ViewController.swift */,
 				B4060FB620E5B29500724D48 /* Main.storyboard */,
 				B4060FB920E5B29700724D48 /* Assets.xcassets */,
 				B4060FBB20E5B29700724D48 /* LaunchScreen.storyboard */,
 				B4060FBE20E5B29700724D48 /* Info.plist */,
 			);
 			path = TapChat;
+			sourceTree = "<group>";
+		};
+		B4060FC420E5B2D800724D48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4060FC720E5B30300724D48 /* homeVC.swift */,
+				B4060FC920E5B69600724D48 /* login_RegisterVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4060FC520E5B2DF00724D48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4060FCB20E5B8B400724D48 /* ContainerViewWithShadow.swift */,
+				B4060FCD20E5BFAD00724D48 /* roundedProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4060FC620E5B2E500724D48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4060FB520E5B29500724D48 /* ViewController.swift in Sources */,
+				B4060FCC20E5B8B400724D48 /* ContainerViewWithShadow.swift in Sources */,
+				B4060FCA20E5B69600724D48 /* login_RegisterVC.swift in Sources */,
+				B4060FCE20E5BFAD00724D48 /* roundedProfileView.swift in Sources */,
 				B4060FB320E5B29500724D48 /* AppDelegate.swift in Sources */,
+				B4060FC820E5B30300724D48 /* homeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 92BBSY6F64;
+				DEVELOPMENT_TEAM = ADP8WRQE72;
 				INFOPLIST_FILE = TapChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,7 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 92BBSY6F64;
+				DEVELOPMENT_TEAM = ADP8WRQE72;
 				INFOPLIST_FILE = TapChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
