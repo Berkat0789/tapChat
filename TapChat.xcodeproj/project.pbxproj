@@ -15,9 +15,19 @@
 		B4060FCA20E5B69600724D48 /* login_RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4060FC920E5B69600724D48 /* login_RegisterVC.swift */; };
 		B4060FCC20E5B8B400724D48 /* ContainerViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4060FCB20E5B8B400724D48 /* ContainerViewWithShadow.swift */; };
 		B4060FCE20E5BFAD00724D48 /* roundedProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4060FCD20E5BFAD00724D48 /* roundedProfileView.swift */; };
+		B407B8F120EE864500FA6D54 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B407B8F020EE864500FA6D54 /* GoogleService-Info.plist */; };
+		B454594620EE894300727A12 /* Dataservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454594520EE894300727A12 /* Dataservice.swift */; };
+		B454594A20EE8C7A00727A12 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454594920EE8C7A00727A12 /* Constants.swift */; };
+		B454594C20EEA6D300727A12 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454594B20EEA6D300727A12 /* Users.swift */; };
+		B454594F20EEA9FC00727A12 /* home_DataService_Etx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454594E20EEA9FC00727A12 /* home_DataService_Etx.swift */; };
+		B454595120EEAB4200727A12 /* homeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454595020EEAB4200727A12 /* homeCell.swift */; };
+		B454595320EEAE4100727A12 /* newMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454595220EEAE4100727A12 /* newMessageController.swift */; };
+		E785B18DF9B6A8EA62324898 /* Pods_TapChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54573AE1681B8FB45E1CB14 /* Pods_TapChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A570D114C80DEC86F004B45 /* Pods-TapChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapChat/Pods-TapChat.debug.xcconfig"; sourceTree = "<group>"; };
+		6CC8B3292996B9A3C565D4BD /* Pods-TapChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapChat/Pods-TapChat.release.xcconfig"; sourceTree = "<group>"; };
 		B4060FAF20E5B29500724D48 /* TapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4060FB220E5B29500724D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4060FB720E5B29500724D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +38,14 @@
 		B4060FC920E5B69600724D48 /* login_RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_RegisterVC.swift; sourceTree = "<group>"; };
 		B4060FCB20E5B8B400724D48 /* ContainerViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewWithShadow.swift; sourceTree = "<group>"; };
 		B4060FCD20E5BFAD00724D48 /* roundedProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedProfileView.swift; sourceTree = "<group>"; };
+		B407B8F020EE864500FA6D54 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B454594520EE894300727A12 /* Dataservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataservice.swift; sourceTree = "<group>"; };
+		B454594920EE8C7A00727A12 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B454594B20EEA6D300727A12 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		B454594E20EEA9FC00727A12 /* home_DataService_Etx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_DataService_Etx.swift; sourceTree = "<group>"; };
+		B454595020EEAB4200727A12 /* homeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCell.swift; sourceTree = "<group>"; };
+		B454595220EEAE4100727A12 /* newMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newMessageController.swift; sourceTree = "<group>"; };
+		C54573AE1681B8FB45E1CB14 /* Pods_TapChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E785B18DF9B6A8EA62324898 /* Pods_TapChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B2B5F765B64A90E12A3E73E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C54573AE1681B8FB45E1CB14 /* Pods_TapChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EB48C3C38CF9E3C8D938E40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A570D114C80DEC86F004B45 /* Pods-TapChat.debug.xcconfig */,
+				6CC8B3292996B9A3C565D4BD /* Pods-TapChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B4060FA620E5B29500724D48 = {
 			isa = PBXGroup;
 			children = (
 				B4060FB120E5B29500724D48 /* TapChat */,
 				B4060FB020E5B29500724D48 /* Products */,
+				8EB48C3C38CF9E3C8D938E40 /* Pods */,
+				8B2B5F765B64A90E12A3E73E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +98,7 @@
 		B4060FB120E5B29500724D48 /* TapChat */ = {
 			isa = PBXGroup;
 			children = (
+				B454594420EE893200727A12 /* Services */,
 				B4060FC620E5B2E500724D48 /* Model */,
 				B4060FC520E5B2DF00724D48 /* View */,
 				B4060FC420E5B2D800724D48 /* Controller */,
@@ -68,6 +107,7 @@
 				B4060FB920E5B29700724D48 /* Assets.xcassets */,
 				B4060FBB20E5B29700724D48 /* LaunchScreen.storyboard */,
 				B4060FBE20E5B29700724D48 /* Info.plist */,
+				B407B8F020EE864500FA6D54 /* GoogleService-Info.plist */,
 			);
 			path = TapChat;
 			sourceTree = "<group>";
@@ -77,6 +117,7 @@
 			children = (
 				B4060FC720E5B30300724D48 /* homeVC.swift */,
 				B4060FC920E5B69600724D48 /* login_RegisterVC.swift */,
+				B454595220EEAE4100727A12 /* newMessageController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -86,6 +127,7 @@
 			children = (
 				B4060FCB20E5B8B400724D48 /* ContainerViewWithShadow.swift */,
 				B4060FCD20E5BFAD00724D48 /* roundedProfileView.swift */,
+				B454595020EEAB4200727A12 /* homeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -93,8 +135,27 @@
 		B4060FC620E5B2E500724D48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B454594B20EEA6D300727A12 /* Users.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B454594420EE893200727A12 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B454594D20EEA9C100727A12 /* Extensions */,
+				B454594520EE894300727A12 /* Dataservice.swift */,
+				B454594920EE8C7A00727A12 /* Constants.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B454594D20EEA9C100727A12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B454594E20EEA9FC00727A12 /* home_DataService_Etx.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4060FC120E5B29700724D48 /* Build configuration list for PBXNativeTarget "TapChat" */;
 			buildPhases = (
+				1BE59BA8482CA46509771C0A /* [CP] Check Pods Manifest.lock */,
 				B4060FAB20E5B29500724D48 /* Sources */,
 				B4060FAC20E5B29500724D48 /* Frameworks */,
 				B4060FAD20E5B29500724D48 /* Resources */,
+				E82B6405DB6937B6EF14A56C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4060FBD20E5B29700724D48 /* LaunchScreen.storyboard in Resources */,
+				B407B8F120EE864500FA6D54 /* GoogleService-Info.plist in Resources */,
 				B4060FBA20E5B29700724D48 /* Assets.xcassets in Resources */,
 				B4060FB820E5B29500724D48 /* Main.storyboard in Resources */,
 			);
@@ -163,16 +227,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1BE59BA8482CA46509771C0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TapChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E82B6405DB6937B6EF14A56C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TapChat/Pods-TapChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapChat/Pods-TapChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B4060FAB20E5B29500724D48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B454594C20EEA6D300727A12 /* Users.swift in Sources */,
 				B4060FCC20E5B8B400724D48 /* ContainerViewWithShadow.swift in Sources */,
 				B4060FCA20E5B69600724D48 /* login_RegisterVC.swift in Sources */,
+				B454594F20EEA9FC00727A12 /* home_DataService_Etx.swift in Sources */,
+				B454595120EEAB4200727A12 /* homeCell.swift in Sources */,
 				B4060FCE20E5BFAD00724D48 /* roundedProfileView.swift in Sources */,
+				B454595320EEAE4100727A12 /* newMessageController.swift in Sources */,
 				B4060FB320E5B29500724D48 /* AppDelegate.swift in Sources */,
+				B454594A20EE8C7A00727A12 /* Constants.swift in Sources */,
 				B4060FC820E5B30300724D48 /* homeVC.swift in Sources */,
+				B454594620EE894300727A12 /* Dataservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +429,7 @@
 		};
 		B4060FC220E5B29700724D48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A570D114C80DEC86F004B45 /* Pods-TapChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,7 +439,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TapChat.TapChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TapChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -332,6 +448,7 @@
 		};
 		B4060FC320E5B29700724D48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CC8B3292996B9A3C565D4BD /* Pods-TapChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -341,7 +458,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TapChat.TapChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TapChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

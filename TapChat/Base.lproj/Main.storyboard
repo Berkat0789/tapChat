@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pbS-Lh-xDl">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" id="pbS-Lh-xDl" customClass="homeCell" customModule="TapChat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pbS-Lh-xDl" id="uly-72-GHH">
@@ -34,10 +34,53 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="qOb-xk-WfN"/>
+                    <connections>
+                        <outlet property="tableView" destination="DU4-dJ-11O" id="BEd-sZ-Vng"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytA-gk-8yp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1090" y="181"/>
+        </scene>
+        <!--New Message Controller-->
+        <scene sceneID="mcb-hG-EGr">
+            <objects>
+                <viewController storyboardIdentifier="NewMessaageController" id="6h2-Pt-xZ6" customClass="newMessageController" customModule="TapChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iM0-vq-HsG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SiV-LK-FIS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="82" id="WTv-KA-Lrl">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WTv-KA-Lrl" id="QxS-YT-Mw8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="81.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SiV-LK-FIS" firstAttribute="leading" secondItem="pNZ-ck-kKQ" secondAttribute="leading" id="Hyy-fd-Qmx"/>
+                            <constraint firstItem="SiV-LK-FIS" firstAttribute="trailing" secondItem="pNZ-ck-kKQ" secondAttribute="trailing" id="QeF-go-ELb"/>
+                            <constraint firstItem="SiV-LK-FIS" firstAttribute="bottom" secondItem="pNZ-ck-kKQ" secondAttribute="bottom" id="d5e-tc-EmR"/>
+                            <constraint firstItem="SiV-LK-FIS" firstAttribute="top" secondItem="iM0-vq-HsG" secondAttribute="top" id="hAt-7a-plz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pNZ-ck-kKQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="SiV-LK-FIS" id="TO8-mc-Qkw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlL-Nj-bq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952.8" y="179.46026986506749"/>
         </scene>
         <!--Login RegisterVC-->
         <scene sceneID="xQV-cw-nQL">
@@ -93,6 +136,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="0.47549530229999998" green="0.7725490196" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="handleLoginRegister:" destination="Dhe-Hw-n57" eventType="touchUpInside" id="1Sk-6Z-yTq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,6 +161,9 @@
                                     <segment title="Register"/>
                                 </segments>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentedValueChanged:" destination="Dhe-Hw-n57" eventType="valueChanged" id="tng-hP-ALq"/>
+                                </connections>
                             </segmentedControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stroller" translatesAutoresizingMaskIntoConstraints="NO" id="smH-md-ybo" customClass="roundedProfileView" customModule="TapChat" customModuleProvider="target">
                                 <rect key="frame" x="157" y="100" width="60" height="60"/>
@@ -141,8 +190,13 @@
                         <viewLayoutGuide key="safeArea" id="AHf-QT-6lf"/>
                     </view>
                     <connections>
+                        <outlet property="containerViewHeight" destination="fMT-PR-wAT" id="jnM-6V-gPn"/>
+                        <outlet property="emailField" destination="kyX-Dl-86w" id="VUK-Ak-b0d"/>
+                        <outlet property="passwordField" destination="Y9j-ke-30h" id="knT-WB-w7C"/>
                         <outlet property="registerButton" destination="n1g-1M-SLW" id="bb6-ZJ-ORs"/>
                         <outlet property="segmanetdView" destination="dQp-gz-32E" id="8JW-Io-Mlm"/>
+                        <outlet property="userProfile" destination="smH-md-ybo" id="26a-u9-NK9"/>
+                        <outlet property="usernameField" destination="gqA-6N-KeH" id="ppX-7V-MMt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCt-AU-JM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
