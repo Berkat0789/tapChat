@@ -32,8 +32,9 @@ class DataService {
             for user in userSnap {
                 let username = user.childSnapshot(forPath: "UserName").value as! String
                 let email = user.childSnapshot(forPath: "Email").value as! String
+                let profileURL = user.childSnapshot(forPath: "userProfile").value as! String
                 let userID = user.key
-                let allUsers = Users(username: username, email: email, image: "", id: userID)
+                let allUsers = Users(username: username, email: email, image: profileURL, id: userID)
                 allusers.append(allUsers)
             }
             completed(allusers)
@@ -47,8 +48,9 @@ class DataService {
             for user in userSnap {
                 let username = user.childSnapshot(forPath: "UserName").value as! String
                 let email = user.childSnapshot(forPath: "Email").value as! String
+                let profileURL = user.childSnapshot(forPath: "userProfile").value as! String
                 let userID = user.key
-                let myData = Users(username: username, email: email, image: "", id: userID)
+                let myData = Users(username: username, email: email, image: profileURL, id: userID)
                 currentUserData = myData
             }
             completed(currentUserData)

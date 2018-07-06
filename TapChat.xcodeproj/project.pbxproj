@@ -22,6 +22,7 @@
 		B454594F20EEA9FC00727A12 /* home_DataService_Etx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454594E20EEA9FC00727A12 /* home_DataService_Etx.swift */; };
 		B454595120EEAB4200727A12 /* homeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454595020EEAB4200727A12 /* homeCell.swift */; };
 		B454595320EEAE4100727A12 /* newMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454595220EEAE4100727A12 /* newMessageController.swift */; };
+		B454595520EEDC3200727A12 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454595420EEDC3200727A12 /* StorageService.swift */; };
 		E785B18DF9B6A8EA62324898 /* Pods_TapChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54573AE1681B8FB45E1CB14 /* Pods_TapChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		B454594E20EEA9FC00727A12 /* home_DataService_Etx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home_DataService_Etx.swift; sourceTree = "<group>"; };
 		B454595020EEAB4200727A12 /* homeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCell.swift; sourceTree = "<group>"; };
 		B454595220EEAE4100727A12 /* newMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newMessageController.swift; sourceTree = "<group>"; };
+		B454595420EEDC3200727A12 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		C54573AE1681B8FB45E1CB14 /* Pods_TapChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				B454594D20EEA9C100727A12 /* Extensions */,
 				B454594520EE894300727A12 /* Dataservice.swift */,
 				B454594920EE8C7A00727A12 /* Constants.swift */,
+				B454595420EEDC3200727A12 /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TapChat/Pods-TapChat-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -262,6 +266,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B454594C20EEA6D300727A12 /* Users.swift in Sources */,
+				B454595520EEDC3200727A12 /* StorageService.swift in Sources */,
 				B4060FCC20E5B8B400724D48 /* ContainerViewWithShadow.swift in Sources */,
 				B4060FCA20E5B69600724D48 /* login_RegisterVC.swift in Sources */,
 				B454594F20EEA9FC00727A12 /* home_DataService_Etx.swift in Sources */,

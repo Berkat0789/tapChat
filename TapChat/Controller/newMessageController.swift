@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class newMessageController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -43,7 +44,7 @@ class newMessageController: UIViewController, UITableViewDelegate, UITableViewDa
         let user = allusers[indexPath.row]
         cell.textLabel?.text = user.userName
         cell.detailTextLabel?.text = user.userEmail
-        cell.imageView?.image = UIImage(named: "mary")
+        cell.imageView?.sd_setImage(with: URL(string: user.userProfileimg!), placeholderImage: UIImage(named: "mary"), options: SDWebImageOptions.progressiveDownload, completed: nil)
         return cell
     }
     

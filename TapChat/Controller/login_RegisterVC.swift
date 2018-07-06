@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class login_RegisterVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class login_RegisterVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var segmanetdView: UISegmentedControl!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var usernameField: UITextField!
@@ -18,6 +18,8 @@ class login_RegisterVC: UIViewController, UIImagePickerControllerDelegate, UINav
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var userProfile: roundedProfileView!
     
+    //Var and arrays
+    var seletedProfileImage: UIImage!
     
     
     override func viewDidLoad() {
@@ -40,7 +42,21 @@ class login_RegisterVC: UIViewController, UIImagePickerControllerDelegate, UINav
     @objc func handleProfileTap() {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
         present(imagePickerController, animated: true, completion: nil)
+    }
+//Protocol conforming functions
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            userProfile.image = editedImage
+            seletedProfileImage = editedImage
+        } else {
+            let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            userProfile.image = image
+            seletedProfileImage = image
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
 //Buttons/Acions
     @IBAction func segmentedValueChanged(_ sender: Any) {
@@ -87,8 +103,19 @@ class login_RegisterVC: UIViewController, UIImagePickerControllerDelegate, UINav
             if error != nil {
                 print(error!)
             } else {
-                let userData = ["Email" : email, "Provider": (Auth.auth().currentUser?.providerID)!, "UserName": name]
-                DataService.instance.addUserToDatabase(userID: (Auth.auth().currentUser?.uid)!, userData: userData)
+                let imageData = UIImageJPEGRepresentation(self.seletedProfileImage, 0.2)
+                let uniqueImageID = NSUUID().uuidString
+                StorageService.init().StorageReference_profileImages.child(uniqueImageID).putData(imageData!, metadata: nil, completion: { (metadata, error) in
+                    if error != nil {
+                        print(error!)
+                    } else {
+                        let image = metadata?.downloadURL()?.absoluteString
+                        let userData = ["Email" : email, "userProfile": image!, "Provider": (Auth.auth().currentUser?.providerID)!, "UserName": name]
+                        DataService.instance.addUserToDatabase(userID: (Auth.auth().currentUser?.uid)!, userData: userData)
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                })
+                
             }
         }
     }
