@@ -19,11 +19,44 @@ class homeVC: UITableViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.delegate = self
-        //Handlers are placed as extensions in  the extensions file
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.plain, target: self, action: #selector(handleLogout))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: UIBarButtonItemStyle.plain, target: self, action: #selector(handleCompose))
         checkifuserisLoggedin()
-     
+    }
+    func checkifuserisLoggedin() {
+        if Auth.auth().currentUser?.uid == nil {
+            //Erorr - Warning Unbalanced calls to begin/end appearance transitions for <UINavigationController: 0x7fb24881e400> to fix this
+            handleLogout()
+        } else {
+            fetchUserDataforMenutitle()
+        }
+    }
+    
+    func fetchUserDataforMenutitle(){
+        DataService.instance.Firebase_Ref_Users.observe(DataEventType.value) { (userSnap) in
+            DataService.instance.getDatafor(UserId: currentUserID) { (mydata) in
+                self.navigationItem.title = mydata.userName
+            }
+        }
+    }
+    @objc func handleLogout() {
+        do {
+            try Auth.auth().signOut()
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let loginRegisterVC = storyboard.instantiateViewController(withIdentifier: "login_RegisterVC") as? login_RegisterVC
+            loginRegisterVC?.homeViewController = self
+            present(loginRegisterVC!, animated: true, completion: nil)
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+    
+    @objc func handleCompose() {
+        let storybaoad = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let composeController = storybaoad.instantiateViewController(withIdentifier: "NewMessaageController") as! newMessageController
+        let navCOntroller  = UINavigationController(rootViewController: composeController)
+        present(navCOntroller, animated: true, completion: nil)
+        
     }
 //--Protocol functions
     override func numberOfSections(in tableView: UITableView) -> Int {

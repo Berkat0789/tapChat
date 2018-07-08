@@ -20,6 +20,7 @@ class login_RegisterVC: UIViewController, UINavigationControllerDelegate, UIImag
     
     //Var and arrays
     var seletedProfileImage: UIImage!
+    var homeViewController = homeVC()
     
     
     override func viewDidLoad() {
@@ -87,6 +88,7 @@ class login_RegisterVC: UIViewController, UINavigationControllerDelegate, UIImag
             if error != nil {
                 print(error!)
             } else {
+                self.homeViewController.fetchUserDataforMenutitle()
                 self.dismiss(animated: true, completion: nil)
                 print("UserLoggedIN")
             }
@@ -103,7 +105,7 @@ class login_RegisterVC: UIViewController, UINavigationControllerDelegate, UIImag
             if error != nil {
                 print(error!)
             } else {
-                let imageData = UIImageJPEGRepresentation(self.seletedProfileImage, 0.2)
+                let imageData = UIImageJPEGRepresentation(self.seletedProfileImage, 0.1)
                 let uniqueImageID = NSUUID().uuidString
                 StorageService.init().StorageReference_profileImages.child(uniqueImageID).putData(imageData!, metadata: nil, completion: { (metadata, error) in
                     if error != nil {
@@ -112,6 +114,7 @@ class login_RegisterVC: UIViewController, UINavigationControllerDelegate, UIImag
                         let image = metadata?.downloadURL()?.absoluteString
                         let userData = ["Email" : email, "userProfile": image!, "Provider": (Auth.auth().currentUser?.providerID)!, "UserName": name]
                         DataService.instance.addUserToDatabase(userID: (Auth.auth().currentUser?.uid)!, userData: userData)
+                        self.homeViewController.fetchUserDataforMenutitle()
                         self.dismiss(animated: true, completion: nil)
                     }
                 })

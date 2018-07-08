@@ -44,8 +44,15 @@ class newMessageController: UIViewController, UITableViewDelegate, UITableViewDa
         let user = allusers[indexPath.row]
         cell.textLabel?.text = user.userName
         cell.detailTextLabel?.text = user.userEmail
-        cell.imageView?.sd_setImage(with: URL(string: user.userProfileimg!), placeholderImage: UIImage(named: "mary"), options: SDWebImageOptions.progressiveDownload, completed: nil)
+        cell.imageView?.sd_setImage(with: URL(string: user.userProfileimg!), placeholderImage: UIImage(named: ""), options: [SDWebImageOptions.progressiveDownload, SDWebImageOptions.continueInBackground], completed: nil)
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let feedVC = storyboard?.instantiateViewController(withIdentifier: "FeedVC") as? FeedVC
+        let user = allusers[indexPath.row]
+        feedVC?.passedUser(user: user)
+        let navController = UINavigationController(rootViewController: feedVC!)
+        present(navController, animated: true, completion: nil)
     }
     
 //Handlers
